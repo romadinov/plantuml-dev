@@ -1,0 +1,21 @@
+modules:
+  macro:
+    - key: anz-x-plantuml-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: ANZ PlantUML Macro
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x
+  id: ari:cloud:ecosystem::app/08987fd7-d858-4180-9c8b-735d0a1b0fe6
+permissions:
+  scopes:
+    - read:comment:confluence
